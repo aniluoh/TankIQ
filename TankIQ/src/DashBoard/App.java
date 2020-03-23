@@ -187,33 +187,17 @@ public class App extends javax.swing.JFrame {
 //        Configure_Sensor cs = new Configure_Sensor();
 //        jDesktopPane1.add();
 //        cs.setVisible(true);
-        if(jDesktopPane1.getAllFrames().length == 0){
-            try{
-                Configure_Sensor configure_sensor = new Configure_Sensor();
-                jDesktopPane1.add(configure_sensor);
-                jDesktopPane1.moveToFront(configure_sensor);
-                configure_sensor.setSize(jDesktopPane1.getWidth(),jDesktopPane1.getHeight());
-                configure_sensor.setLocation(0,0);
-                configure_sensor.setVisible(true);
-                }catch(Exception e1){
-                e1.printStackTrace();
-            }
+        jDesktopPane1.removeAll();
+        try{
+            Configure_Sensor configure_sensor = new Configure_Sensor();
+            jDesktopPane1.add(configure_sensor);
+            jDesktopPane1.moveToFront(configure_sensor);
+            configure_sensor.setSize(jDesktopPane1.getWidth(),jDesktopPane1.getHeight());
+            configure_sensor.setLocation(0,0);
+            configure_sensor.setVisible(true);
+        }catch(Exception e1){
+            e1.printStackTrace();
         }
-        else{
-            jDesktopPane1.remove(0);
-            try{
-                Configure_Sensor configure_sensor = new Configure_Sensor();
-                jDesktopPane1.add(configure_sensor);
-                jDesktopPane1.moveToFront(configure_sensor);
-                configure_sensor.setSize(jDesktopPane1.getWidth(),jDesktopPane1.getHeight());
-                configure_sensor.setLocation(0,0);
-                configure_sensor.setVisible(true);
-                }catch(Exception e1){
-                e1.printStackTrace();
-            } 
-        }
-
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -221,35 +205,22 @@ public class App extends javax.swing.JFrame {
 //        CreateTable ct = new CreateTable();
 //        jDesktopPane1.add(ct);
 //        ct.setVisible(true);  
-        if(jDesktopPane1.getAllFrames().length == 0){
-            try{
-                Create_Table ct = new Create_Table();
-                jDesktopPane1.add(ct);
-                jDesktopPane1.moveToFront(ct);
-                ct.setSize(jDesktopPane1.getWidth(),jDesktopPane1.getHeight());
-                ct.setLocation(0,0);
-                ct.setVisible(true);
-                }catch(Exception e1){
-                e1.printStackTrace();
-            }
-        }
-        else{
-            jDesktopPane1.remove(0);
-            try{
-                Create_Table ct = new Create_Table();
-                jDesktopPane1.add(ct);
-                jDesktopPane1.moveToFront(ct);
-                ct.setSize(jDesktopPane1.getWidth(),jDesktopPane1.getHeight());
-                ct.setLocation(0,0);
-                ct.setVisible(true);
-                }catch(Exception e1){
-                e1.printStackTrace();
-            } 
+        jDesktopPane1.removeAll();
+        try{
+            Create_Table ct = new Create_Table();
+            jDesktopPane1.add(ct);
+            jDesktopPane1.moveToFront(ct);
+            ct.setSize(jDesktopPane1.getWidth(),jDesktopPane1.getHeight());
+            ct.setLocation(0,0);
+            ct.setVisible(true);
+        }catch(Exception e1){
+            e1.printStackTrace();
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        jDesktopPane1.removeAll();
         try{
             Load_Save_Configuration loadSaveConfig = new Load_Save_Configuration();
             jDesktopPane1.add(loadSaveConfig);
@@ -264,6 +235,7 @@ public class App extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
 //        Load Table
+        jDesktopPane1.removeAll();
         try{
             Load_Table loadTable = new Load_Table();
             jDesktopPane1.add(loadTable);
@@ -279,6 +251,7 @@ public class App extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        jDesktopPane1.removeAll();
         try{
             Connect_Port  connectPort = new Connect_Port();
             jDesktopPane1.add(connectPort);
