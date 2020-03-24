@@ -5,6 +5,9 @@
  */
 package DashBoard;
 
+import java.awt.event.MouseListener;
+import javax.swing.plaf.basic.BasicInternalFrameUI;
+
 /**
  *
  * @author startelelogic
@@ -16,6 +19,10 @@ public class Connect_Port extends javax.swing.JInternalFrame {
      */
     public Connect_Port() {
         initComponents();
+        BasicInternalFrameUI basicInternalFrameUI = ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI());
+        for(MouseListener Listner:basicInternalFrameUI.getNorthPane().getMouseListeners()){
+            basicInternalFrameUI.getNorthPane().removeMouseListener(Listner);
+        }
     }
 
     /**

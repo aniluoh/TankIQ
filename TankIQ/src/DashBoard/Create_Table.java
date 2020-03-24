@@ -5,6 +5,9 @@
  */
 package DashBoard;
 
+import java.awt.event.MouseListener;
+import javax.swing.plaf.basic.BasicInternalFrameUI;
+
 /**
  *
  * @author startelelogic
@@ -16,6 +19,10 @@ public class Create_Table extends javax.swing.JInternalFrame {
      */
     public Create_Table() {
         initComponents();
+        BasicInternalFrameUI basicInternalFrameUI = ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI());
+        for(MouseListener Listner:basicInternalFrameUI.getNorthPane().getMouseListeners()){
+            basicInternalFrameUI.getNorthPane().removeMouseListener(Listner);
+        }
     }
 
     /**
@@ -356,7 +363,6 @@ public class Create_Table extends javax.swing.JInternalFrame {
         jTextField10 = new javax.swing.JTextField();
         jTextField11 = new javax.swing.JTextField();
 
-        setIconifiable(true);
         setTitle("Create Table");
         setPreferredSize(new java.awt.Dimension(424, 550));
 
